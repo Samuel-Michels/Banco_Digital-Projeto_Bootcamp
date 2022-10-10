@@ -7,6 +7,8 @@ public class CriarConta{
     String nome,senha,decisaoPoupanca;
     Boolean isOptouPoupanca = false;
 
+
+
     public void criarConta(){
         Scanner scan = new Scanner(System.in);
         ContaDados conta = new ContaDados();

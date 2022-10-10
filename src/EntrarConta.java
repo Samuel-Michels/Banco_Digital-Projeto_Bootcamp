@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class EntrarConta {
 
-    private boolean ISGODMODE = false;
+    private boolean DEBUGMODE = new ParametrosSistema().ativarDebug();
 
     private String contaInput;
     private String agenciaInput;
@@ -11,9 +11,12 @@ public class EntrarConta {
 
     public Boolean entrarConta(){
         Scanner scan = new Scanner(System.in);
-        ContaDados conta = new ContaDados();
+        ContaDados conta;
         IOJson lerJson = new IOJson();
 
+        if (DEBUGMODE){
+            return true;
+        }
 
         System.out.println("Conta: ");
         contaInput = scan.nextLine();
@@ -37,10 +40,6 @@ public class EntrarConta {
             }
         } else {
             System.out.println("Dados incorretos!");
-        }
-
-        if (ISGODMODE){
-            return true;
         }
 
         return false;
