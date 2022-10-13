@@ -7,7 +7,7 @@ Escrito em java baseado em POO
 
 Interface em terminal, Login e entrar, Conta corrente e poupança, Score serasa, Cheque especial, Extrato detalhado, Saque e deposito de conta corrente, Transferência...
 
-### Porque o nome do Banco digital é "Banco te amo"?
+### Porque o nome do Banco digital é "Banco tiamo"?
 
 É uma refrência humoristica ao antigo programa de TV hermes e renato
 
