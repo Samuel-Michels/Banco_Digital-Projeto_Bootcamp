@@ -44,7 +44,7 @@ public class Main {
         MovimentoConta movimentoConta = new MovimentoConta();
         MovimentoPoupanca movimentoPoupanca = new MovimentoPoupanca();
 
-        System.out.println("BEM VINDO AO BANCO DIGITAL TE AMO \n 1.Entrar \n 2.cadastrar\n->");
+        System.out.println("BEM VINDO AO BANCO DIGITAL TIAMO \n 1.Entrar \n 2.cadastrar\n->");
         decisao = scan.nextLine();
 
         //Interface de Boas vindas
