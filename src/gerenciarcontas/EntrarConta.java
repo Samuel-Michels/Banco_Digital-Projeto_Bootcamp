@@ -1,3 +1,9 @@
+package gerenciarcontas;
+
+import model.ContaDados;
+import tools.IOJson;
+import tools.ParametrosSistema;
+
 import java.util.Scanner;
 
 public class EntrarConta {
@@ -9,7 +15,7 @@ public class EntrarConta {
     private String senhaInput;
 
 
-    public Boolean entrarConta(){
+    public Boolean entrarConta(String contaInput, String agenciaInput, String senhaInput){
         Scanner scan = new Scanner(System.in);
         ContaDados conta;
         IOJson lerJson = new IOJson();
@@ -17,13 +23,6 @@ public class EntrarConta {
         if (DEBUGMODE){
             return true;
         }
-
-        System.out.println("Conta: ");
-        contaInput = scan.nextLine();
-        System.out.println("Agencia: ");
-        agenciaInput = scan.nextLine();
-        System.out.println("Senha: ");
-        senhaInput = scan.nextLine();
 
         conta = lerJson.lerArquivoCliente(agenciaInput,contaInput);
 

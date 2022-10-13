@@ -1,3 +1,5 @@
+package tools;
+
 public class ParametrosSistema {
 
     public Boolean ativarDebug(){

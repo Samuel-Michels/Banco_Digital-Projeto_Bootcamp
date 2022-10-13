@@ -1,19 +1,27 @@
+package gerenciarcontas;
+
+import tools.DataCustom;
+
 import java.util.Scanner;
 
 public class MovimentoConta {
 
     DataCustom data = new DataCustom();
 
-    public void mostrarExtratoConta(String nome,Double contaCorrente, Double chequeEspecial){
-        double saldoTotal = chequeEspecial + contaCorrente;
+    public void mostrarExtratoConta(String nome,Double contaCorrente, Double chequeEspecial,Double poupanca){
+        double saldoTotal = chequeEspecial + contaCorrente+ poupanca;
 
         System.out.println("Olá, " + nome);
         System.out.println("Extrato do dia: " + data.mostrarDataEHora());
         System.out.println("---------------------");
         System.out.println("Conta Corrente: R$"+contaCorrente);
-        System.out.println("Cheque Especial: R$"+chequeEspecial);
+        System.out.println("Limite Cheque Especial: R$"+chequeEspecial);
         System.out.println("---------------------");
-        System.out.println("Saldo Total R$"+saldoTotal);
+        if (poupanca>0){
+            System.out.println("Total Poupança: R$" + poupanca);
+            System.out.println("---------------------");
+        }
+        System.out.println("Saldo Total com investimentos R$"+saldoTotal);
         System.out.println("---------------------");
         if (contaCorrente < 0){
             System.out.println("Você tem cobranças pendentes, mantenha-se em dia com cheque especial\nEvite cobrança de Juros!");
@@ -74,11 +82,5 @@ public class MovimentoConta {
 
         return saldoContaCorrente;
     }
-
-    public Boolean isMovimentoLegal(){
-
-        return false;
-    }
-
 
 }

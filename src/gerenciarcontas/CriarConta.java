@@ -1,3 +1,8 @@
+package gerenciarcontas;
+
+import model.ContaDados;
+import tools.IOJson;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -32,7 +37,7 @@ public class CriarConta{
 
         new IOJson().registrarArquivoCliente(conta);
 
-        System.out.println("Nome: "+conta.getNome() +"\nSenha: "+ conta.getSenha() +"\nAgencia: "+ conta.getAgencia() +"\nConta: "+ conta.getConta() +"\nScore Serasa: "+ conta.getSerasaScore() +"\nUsa poupança?: "+ conta.getPoupanca());
+        //System.out.println("Nome: "+conta.getNome() +"\nSenha: "+ conta.getSenha() +"\nAgencia: "+ conta.getAgencia() +"\nConta: "+ conta.getConta() +"\nScore Serasa: "+ conta.getSerasaScore() +"\nUsa poupança?: "+ conta.getPoupanca());
 
     }
 
